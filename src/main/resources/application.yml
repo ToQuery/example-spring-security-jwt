@@ -24,4 +24,6 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8080/oauth2/jwks
+#          jws-algorithms: RS256
+#          public-key-location: classpath:jwts/rsa_public.isa
 
