@@ -20,7 +20,7 @@ public class OAuth2ResourceServerSecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorize) -> authorize
-                        .antMatchers("/message/**").hasAuthority("SCOPE_read")
+                        .requestMatchers("/message/**").hasAuthority("SCOPE_read")
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
